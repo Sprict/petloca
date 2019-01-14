@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,63 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="petloca" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Petloca" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIQ-Hg-wVA">
+                                <rect key="frame" x="77" y="318" width="221.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldO-c3-niP">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="ペトロケ" id="n2t-3F-tiU">
+                                        <barButtonItem key="backBarButtonItem" title="back" id="Lhm-PZ-mj2"/>
+                                        <barButtonItem key="leftBarButtonItem" image="menu" id="jvV-Tn-DD9"/>
+                                        <barButtonItem key="rightBarButtonItem" image="icon_bell" id="20Q-ln-cdP"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Cr-hf-wcR">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="依頼" image="icon_memo" id="mzw-7i-kw1"/>
+                                    <tabBarItem title="コンタクト" image="icon_contact" id="Jj9-5u-YIh"/>
+                                    <tabBarItem title="投稿" image="icon_camera" id="TYw-oi-eLJ"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tIQ-Hg-wVA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1CG-fi-8qD"/>
+                            <constraint firstItem="8Cr-hf-wcR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="B55-mR-xxN"/>
+                            <constraint firstItem="8Cr-hf-wcR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="C7r-XA-d2m"/>
+                            <constraint firstItem="ldO-c3-niP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GHW-8P-137"/>
+                            <constraint firstItem="ldO-c3-niP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MBq-jH-NIc"/>
+                            <constraint firstItem="tIQ-Hg-wVA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Z30-3d-hbf"/>
+                            <constraint firstAttribute="bottom" secondItem="8Cr-hf-wcR" secondAttribute="bottom" id="al6-dv-1g1"/>
+                            <constraint firstItem="ldO-c3-niP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qVW-Kc-rOg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="40.799999999999997" y="25.637181409295355"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_bell" width="22.5" height="25"/>
+        <image name="icon_camera" width="30" height="25.5"/>
+        <image name="icon_contact" width="25.5" height="25.5"/>
+        <image name="icon_memo" width="24" height="23.5"/>
+        <image name="menu" width="25.5" height="17"/>
+    </resources>
 </document>
