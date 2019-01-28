@@ -11,6 +11,21 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="QPg-X1-Wbk">
+            <objects>
+                <viewController id="HdU-V6-aoW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BDu-Z2-vAU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="HlW-ej-oze"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vGt-Z0-VBL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-623" y="820"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="petloca" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,12 +33,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Petloca" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIQ-Hg-wVA">
-                                <rect key="frame" x="77" y="318" width="221.5" height="31.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldO-c3-niP">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
@@ -34,31 +43,53 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Cr-hf-wcR">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="asH-th-W8C">
+                                <rect key="frame" x="0.0" y="108" width="375" height="471"/>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bue-ni-H1O">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <items>
-                                    <tabBarItem title="依頼" image="icon_memo" id="mzw-7i-kw1"/>
-                                    <tabBarItem title="コンタクト" image="icon_contact" id="Jj9-5u-YIh"/>
-                                    <tabBarItem title="投稿" image="icon_camera" id="TYw-oi-eLJ"/>
+                                    <barButtonItem title="Item" id="QNV-Ii-W8m"/>
+                                    <barButtonItem title="Item" id="YGy-4l-yWY"/>
                                 </items>
-                            </tabBar>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bih-2V-sNz">
+                                <rect key="frame" x="0.0" y="579" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="yyq-p1-f4O"/>
+                                    <barButtonItem title="Item" image="icon_memo" id="OB7-aF-NUs"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6ji-4r-WUs"/>
+                                    <barButtonItem title="Item" image="icon_contact" id="Z83-vJ-gil"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="uLz-9N-YHj"/>
+                                    <barButtonItem title="Item" image="icon_camera" id="zZS-KJ-PiD"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ixC-pr-VHh"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="tIQ-Hg-wVA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1CG-fi-8qD"/>
-                            <constraint firstItem="8Cr-hf-wcR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="B55-mR-xxN"/>
-                            <constraint firstItem="8Cr-hf-wcR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="C7r-XA-d2m"/>
+                            <constraint firstItem="Bih-2V-sNz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Vx-Xe-68V"/>
                             <constraint firstItem="ldO-c3-niP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GHW-8P-137"/>
+                            <constraint firstItem="Bue-ni-H1O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I5U-Gl-ryp"/>
+                            <constraint firstItem="Bue-ni-H1O" firstAttribute="top" secondItem="ldO-c3-niP" secondAttribute="bottom" id="I6g-Zf-hsZ"/>
                             <constraint firstItem="ldO-c3-niP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MBq-jH-NIc"/>
-                            <constraint firstItem="tIQ-Hg-wVA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Z30-3d-hbf"/>
-                            <constraint firstAttribute="bottom" secondItem="8Cr-hf-wcR" secondAttribute="bottom" id="al6-dv-1g1"/>
+                            <constraint firstItem="Bue-ni-H1O" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RtF-w2-GP4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bih-2V-sNz" secondAttribute="bottom" id="Wcz-P1-4rn"/>
+                            <constraint firstItem="Bih-2V-sNz" firstAttribute="top" secondItem="asH-th-W8C" secondAttribute="bottom" id="bhI-10-iPH"/>
+                            <constraint firstItem="asH-th-W8C" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fka-Ma-jBr"/>
                             <constraint firstItem="ldO-c3-niP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qVW-Kc-rOg"/>
+                            <constraint firstItem="asH-th-W8C" firstAttribute="top" secondItem="Bue-ni-H1O" secondAttribute="bottom" id="rFF-jT-T59"/>
+                            <constraint firstItem="asH-th-W8C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tHj-pO-wVa"/>
+                            <constraint firstItem="Bih-2V-sNz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xDm-J5-IoP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="MapView" destination="asH-th-W8C" id="pm5-kW-tbn"/>
+                        <segue destination="HdU-V6-aoW" kind="show" id="ZnI-r7-Pmg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
